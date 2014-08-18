@@ -28,4 +28,11 @@ class TasksController <ApplicationController
       render('/tasks/show.html.erb')
     end
   end
+
+  def destroy
+    @tasks = Task.all
+    @task = Task.find(params[:id])
+    @task.destroy
+    render('/tasks/index.html.erb')
+  end
 end

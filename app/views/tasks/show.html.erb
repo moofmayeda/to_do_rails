@@ -17,5 +17,18 @@
   <input name="_method" type="hidden" value="patch">
   <label for="task_description">Description</label>
   <input id="task_description" name="task[description]" type="text" value="<%@task.description %>">
-  <button> Create Task </button>
+
+  <button> Update Task </button>
 </form>
+
+<form action="/<%= @task.id %>" method="post">
+  <input name="_method" type="hidden" value="patch">
+  <input name="task[done]" type="hidden" value="true">
+  <button>Mark done</button>
+</form>
+
+<p><a href="/<%= @task.id %>"
+  data-confirm="Are you sure?"
+  data-method="delete"
+  rel="nofollow">Delete Task</a></p>
+
