@@ -5,3 +5,9 @@
     <li> <%= task.description %></li>
   <% end %>
 </ul>
+
+<form action="/" method="post">
+  <label for="task_description">Description</label>
+  <input id="task_description" name="task[description]" type="text" value="<%@task.description %>">
+  <button> Create Task </button>
+</form>
