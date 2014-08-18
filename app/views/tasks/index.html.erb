@@ -1,0 +1,7 @@
+<h1>Welcome to your To Do!</h1>
+
+<ul>
+  <% @tasks.each do |task| %>
+    <li> <%= task.description %></li>
+  <% end %>
+</ul>
